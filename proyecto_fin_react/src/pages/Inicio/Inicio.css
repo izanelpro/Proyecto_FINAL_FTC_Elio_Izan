@@ -1,0 +1,45 @@
+/* Contenedor de Apartados */
+.apartados{
+  display: flex;
+}
+
+/* Cada Apartado de Inicio */
+.apartado_inicio{
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000000;
+  max-width: 350px;
+  background-color: rgba(255, 255, 255, 0.534);
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.863); 
+  transition-duration: 0.5s;
+}
+.apartado_inicio h2{    /* Encabezado de Apartado */
+  color: #000000;
+}
+.apartado_inicio img {  /* Imágenes de cada Apartado */
+  height: 200px;
+  width: auto;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.651); 
+  border-radius: 5px;  
+}
+
+/* Boton apartado Inicio */
+.boton_ini {
+  background-color:#0F3460 ;
+  color: #ffffff;
+  border: 1px solid #0F3460;
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.boton_ini:hover {  /* Boton apartado :hover */
+  background-color:#e9456000 ;
+  color: #E94560;
+  border: 1px solid #E94560;
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+}

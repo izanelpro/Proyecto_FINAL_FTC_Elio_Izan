@@ -1,0 +1,53 @@
+/* Estilos para el título */
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.titulo img {
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.titulo img:hover {
+    transform: scale(1.1);
+}
+
+.titulo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Cabecera */
+header {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    align-items: center;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+}
+
+nav a {  /* Enlaces de navegación */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {  /* Enlaces de navegación: hover */
+    color: #E94560;
+}

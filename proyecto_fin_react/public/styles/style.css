@@ -1,0 +1,59 @@
+/* 
+GLOBAL
+*/
+
+/* Body de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(135deg, #1A1A2E, #16213E, #0F3460, #E94560);
+    color: white;
+    background-attachment: fixed;
+    height: 100%;
+}
+/* Estilos de los títulos */
+#services h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#services p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Contenedor que genera React */
+#root {
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+  }
+
+/* Cada Bloque de Nombre Página */
+.services{
+    margin: 40px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Página responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container {
+        padding: 30px 10px;
+    }
+    section {
+        padding: 15px;
+    }
+}

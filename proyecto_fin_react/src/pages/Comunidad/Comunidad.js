@@ -13,7 +13,7 @@ function Comunidad() {
                 <div className="apartado">
                     <h2>Crea tu propia Comunidad!</h2>
                     <img 
-                        src="/Proyecto-FTC_Elio_Izan/proyectoftc/src/main/resources/static/imgs/IMGS_PAG/boxer-1984344_1280.jpg" 
+                        src="/imgs/IMGS_PAG/boxer-1984344_1280.jpg" 
                         alt="Imagen Boxeo" 
                     />
                 </div>
@@ -21,7 +21,7 @@ function Comunidad() {
                 <div className="apartado">
                     <h2>Únete a una Comunidad existente!</h2>
                     <img 
-                        src="/Proyecto-FTC_Elio_Izan/proyectoftc/src/main/resources/static/imgs/IMGS_PAG/baseball-1495939_1280.jpg" 
+                        src="/imgs/IMGS_PAG/baseball-1495939_1280.jpg" 
                         alt="Imagen Baseball Equipo" 
                     />
                 </div>

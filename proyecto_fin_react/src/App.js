@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import Inicio from './pages/Inicio/Inicio';
 import MyFit from './pages/MyFit/MyFit';
 import Comunidad from './pages/Comunidad/Comunidad';
+import Contacto from './pages/Contacto/Contacto';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Inicio />} /> 
         <Route path="/myfit" element={<MyFit />} /> 
         <Route path="/comunidad" element={<Comunidad />} /> 
+        <Route path="/contacto" element={<Contacto />} /> 
       </Routes>
       <Footer />
     </Router>

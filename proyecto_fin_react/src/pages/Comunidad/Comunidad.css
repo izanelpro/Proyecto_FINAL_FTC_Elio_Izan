@@ -24,7 +24,7 @@ COMUNIDAD
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.863); 
     transition-duration: 0.5s;
-    max-width: 350px; /* Limita el tamaño de los apartados */
+    width: 400px; /* Limita el tamaño de los apartados */
     text-align: center;
     margin-bottom: 20px; /* Espacio entre los apartados */
 }

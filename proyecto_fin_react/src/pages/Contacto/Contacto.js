@@ -6,7 +6,7 @@ function Contacto() {
         <div className="container">
             <section id="services" className="services">
                 <h2>Contacto</h2>
-                <p>Contacta con nosotros!</p>
+                <p><p>Envíanos un mensaje y te responderemos lo antes posible!</p></p>
             </section>
         </div>
     );

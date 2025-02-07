@@ -1,45 +1,121 @@
-/* Contenedor de Apartados */
+/* Bloque Total Apartados */
+.container_ini{
+  margin: 4%;
+  background-color: rgba(255, 255, 255, 0.699);
+  padding: 20px;
+  border: 1px ;
+  border-radius: 5px;
+}
+
+/* Bloque Fila Apartados */
 .apartados{
   display: flex;
 }
 
-/* Cada Apartado de Inicio */
-.apartado_inicio{
-  padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #000000;
+/* Noticia */
+.news-card {
+  margin: auto;
   max-width: 350px;
-  background-color: rgba(255, 255, 255, 0.534);
+  background: white;
   border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.863); 
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
   transition-duration: 0.5s;
-}
-.apartado_inicio h2{    /* Encabezado de Apartado */
-  color: #000000;
-}
-.apartado_inicio img {  /* Imágenes de cada Apartado */
-  height: 200px;
-  width: auto;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.651); 
-  border-radius: 5px;  
+  cursor: pointer;
+}/* Noticia :HOVER */
+.news-card:hover {
+  transform: scale(1.02);
 }
 
-/* Boton apartado Inicio */
-.boton_ini {
-  background-color:#0F3460 ;
-  color: #ffffff;
-  border: 1px solid #0F3460;
-  border-radius: 5px;
-  padding: 15px;
-  cursor: pointer;
-  transition-duration: 0.5s;
+/* Contenedor de la  Imagen + Overlay */
+.news-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}/* Contenedor Imagen noticia + :HOVER */
+.news-image-container:hover .news-image {
+  transform: scale(1.1);
+}/* Contenedor Overlay noticia + :HOVER */
+.news-image-container:hover .news-overlay {
+  background: rgba(0, 0, 0, 0.4);
 }
-.boton_ini:hover {  /* Boton apartado :hover */
-  background-color:#e9456000 ;
-  color: #E94560;
-  border: 1px solid #E94560;
-  border-radius: 5px;
+
+/* Imagen Noticia */
+.news-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Overlay imagen */
+.news-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease-in-out;
+}
+
+/* Contenido de la tarjeta */
+.news-content {
   padding: 15px;
+}
+
+/* Encabezado Noticia */
+.news-header {
+  display: flex;
+  align-items: center;
+  color: gray;
+  font-size: 0.9rem;
+}
+
+/* Logo Tipo Noticia */
+.news-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Tipo Noticia */
+.news-source {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Publicación Noticia */
+.news-time {
+  color: #666;
+}
+
+/* Texto de la noticia */
+.news-text {
+  margin-top: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Botones de interacción */
+.news-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+/* Botones like y comentar */
+.news-like, .news-comment {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: gray;
   cursor: pointer;
+}/* Botones like y comentar :HOVER */
+.news-like:hover, .news-comment:hover {
+  color: #E94560;
 }

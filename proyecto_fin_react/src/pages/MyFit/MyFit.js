@@ -8,6 +8,7 @@ function MyFit() {
                 <h2>MyFit</h2>
                 <p>Consulta tu IMC y descubre información saludable</p>
             </section>
+            
         </div>
     );
 }

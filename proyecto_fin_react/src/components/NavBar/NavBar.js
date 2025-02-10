@@ -1,32 +1,32 @@
 import React, { useState } from "react";
-import "./NavBar.css";
+import "./NavBar2.css";
 import { Link } from "react-router-dom";
 
 function NavBar() {
-  // Desplegable
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <header>
-      <div className="titulo">
+    <header className="navbar">
+      {/* Contenedor del Logo + Título */}
+      <div className="navbar-left">
         <Link to="/">
-          <img src="/imgs/LOGO/CommunityLogo.png" alt="Community Fit Logo" />
+          <img src="/imgs/LOGO/CommunityLogo2.png" alt="Community Fit Logo" className="logo" />
         </Link>
-        <h1>Community Fit</h1>
+        <h1 className="site-title">Community Fitness</h1>
       </div>
-      <nav>
-        <Link to="/">Inicio</Link>
-        <Link to="/myfit">MyFit</Link>
 
-        {/* Contenedor del menú desplegable */}
+      {/* Contenedor del Menú */}
+      <nav className="navbar-links">
+        <Link to="/">Inicio</Link>
+        <Link to="/myFit">MyFit</Link>
+
+        {/* Menú Desplegable */}
         <div
           className="dropdown"
           onMouseEnter={() => setDropdown(true)}
           onMouseLeave={() => setDropdown(false)}
         >
           <Link to="/comunidad">Comunidad</Link>
-
-          {/* Menú desplegable */}
           {dropdown && (
             <div className="dropdown-menu">
               <Link to="/com_vcrear">Crear Comunidad</Link>
@@ -34,9 +34,11 @@ function NavBar() {
             </div>
           )}
         </div>
-
         <Link to="/contacto">Contacto</Link>
       </nav>
+
+      {/* Botón de Iniciar Sesión */}
+      <Link to="/registrarse" className="login-button">Iniciar Sesión</Link>
     </header>
   );
 }

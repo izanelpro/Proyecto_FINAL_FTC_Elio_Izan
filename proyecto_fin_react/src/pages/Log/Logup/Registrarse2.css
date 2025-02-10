@@ -1,0 +1,92 @@
+.container {
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Centra en toda la pantalla */
+  }
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Centra en toda la pantalla */
+}
+
+.logo_reg {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  margin: 0;
+}
+
+.logo_reg:hover {
+  transform: scale(1.1);
+}
+
+.form_registro {
+  background: rgba(0, 0, 0, 0.63);
+  border-radius: 5px;
+  padding: 50px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 6vw;
+}
+
+.form_registro h2 {
+    background: linear-gradient(90deg, #ff8c00, #ff0080);
+    -webkit-background-clip: text;    /* Background del texto */
+    -webkit-text-fill-color: transparent; /* Background del background del texto */
+    font-weight: bold;
+    margin: 10px;
+}
+input {
+  display: block;
+  width: 95%; /* Que ocupe todo el ancho */
+  padding: 8px;
+  margin: 10px 0; /* Espacio entre inputs */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Login Button */
+button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(90deg, #ff8c00, #ff0080); /* Degradado inicial */
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s;
+    text-decoration: none;
+    margin-top: 1vw;
+  }
+  
+  button:hover {
+    background: transparent;  /* Fondo transparente al hacer hover */
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg, #ff8c00, #ff0080);
+    box-shadow: 0 0 5px #ff8c00, 0 0 10px #ff0080;  /* Sombra colorida */
+  }
+  
+  button::before { /* Borde con degradado */
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px; /* Grosor del borde */
+    background: linear-gradient(90deg, #ff8c00, #ff0080);
+    -webkit-mask: 
+      linear-gradient(white 0 0) content-box, 
+      linear-gradient(white 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }

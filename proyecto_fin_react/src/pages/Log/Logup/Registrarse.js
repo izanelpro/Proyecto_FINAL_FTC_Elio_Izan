@@ -1,12 +1,12 @@
 import React from 'react';
-import './Registrarse.css';  // Asegúrate de tener el archivo CSS
+import './Registrarse2.css';  // Asegúrate de tener el archivo CSS
 import { Link } from 'react-router-dom';
 
 function Registrarse() {
     return (
         <div className="container">
             <Link to="/">
-            <img src="/imgs/LOGO/CommunityLogo.png" alt="Community Fit Logo" className='logo_reg' />
+            <img src="/imgs/LOGO/CommunityLogo2.png" alt="Community Fit Logo" className='logo_reg' />
             </Link>
             <div className="container2">
                 <form className='form_registro'>

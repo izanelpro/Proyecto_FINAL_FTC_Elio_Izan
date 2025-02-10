@@ -6,6 +6,7 @@ import Inicio from './pages/Inicio/Inicio';
 import MyFit from './pages/MyFit/MyFit';
 import Comunidad from './pages/Comunidad/Comunidad';
 import Contacto from './pages/Contacto/Contacto';
+import Registrarse from "./pages/Log/Logup/Registrarse";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/myfit" element={<MyFit />} /> 
         <Route path="/comunidad" element={<Comunidad />} /> 
         <Route path="/contacto" element={<Contacto />} /> 
+        <Route path="/registrarse" element={<Registrarse />} /> 
       </Routes>
       <Footer />
     </Router>

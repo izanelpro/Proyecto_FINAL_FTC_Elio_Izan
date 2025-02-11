@@ -6,26 +6,25 @@ import Inicio from './pages/Inicio/Inicio';
 import MyFit from './pages/MyFit/MyFit';
 import Comunidad from './pages/Comunidad/Comunidad';
 import Contacto from './pages/Contacto/Contacto';
-import Registrarse from './pages/Log/Logup/Registrarse';
+import Registrarse from "./pages/Log/Logup/Registrarse";
+import Login from "./pages/Log/Log In/Login";
 
 function Layout() {
   const location = useLocation();
+  const hideNavAndFooterRoutes = ['/registrarse', '/login']; ; 
 
   return (
     <>
-      {/* Ocultar NavBar en /registrarse */}
-      {location.pathname !== "/registrarse" && <NavBar />}
-
+      {!hideNavAndFooterRoutes.includes(location.pathname) && <NavBar />}
       <Routes>
         <Route path="/" element={<Inicio />} /> 
         <Route path="/myfit" element={<MyFit />} /> 
         <Route path="/comunidad" element={<Comunidad />} /> 
         <Route path="/contacto" element={<Contacto />} /> 
         <Route path="/registrarse" element={<Registrarse />} /> 
+        <Route path="/login" element={<Login />} /> 
       </Routes>
-
-      {/* Ocultar Footer en /registrarse si es necesario */}
-      {location.pathname !== "/registrarse" && <Footer />}
+      {!hideNavAndFooterRoutes.includes(location.pathname) && <Footer />}
     </>
   );
 }

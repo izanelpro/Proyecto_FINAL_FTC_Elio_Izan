@@ -11,7 +11,7 @@ import Login from "./pages/Log/Log In/Login";
 
 function Layout() {
   const location = useLocation();
-  const hideNavAndFooterRoutes = ['/registrarse']  ; 
+  const hideNavAndFooterRoutes = ['/registrarse', '/login']; ; 
 
   return (
     <>

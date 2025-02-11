@@ -1,7 +1,6 @@
   /* Apartado Comunidad */
   .myFit-card {
-    margin: auto;
-    margin-bottom: 30px;
+    margin: 0;
     color: black;
     max-width: 350px;
     background: white;

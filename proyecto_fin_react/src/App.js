@@ -6,7 +6,7 @@ import Inicio from './pages/Inicio/Inicio';
 import MyFit from './pages/MyFit/MyFit';
 import Comunidad from './pages/Comunidad/Comunidad';
 import Contacto from './pages/Contacto/Contacto';
-import Registrarse from "./pages/Log/Logup/Registrarse";
+import SignUp from "./pages/Log/Sign Up/SignUp";
 import Login from "./pages/Log/Log In/Login";
 
 function Layout() {
@@ -21,7 +21,7 @@ function Layout() {
         <Route path="/myfit" element={<MyFit />} /> 
         <Route path="/comunidad" element={<Comunidad />} /> 
         <Route path="/contacto" element={<Contacto />} /> 
-        <Route path="/registrarse" element={<Registrarse />} /> 
+        <Route path="/registrarse" element={<SignUp />} /> 
         <Route path="/login" element={<Login />} /> 
       </Routes>
       {!hideNavAndFooterRoutes.includes(location.pathname) && <Footer />}

@@ -25,13 +25,11 @@ function SignUp() {
             alert("Las contraseñas no coinciden");
             return;
         }
-
-        setFormData({
+        
+        signUpUser({
             name: formData.name,
             password: formData.password
-        })
-        
-        signUpUser(formData);
+        });
 
         // Enviar los datos a una API o manejarlos según necesites
     };

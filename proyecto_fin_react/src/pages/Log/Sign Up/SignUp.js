@@ -31,6 +31,8 @@ function SignUp() {
             password: formData.password
         });
 
+        alert("Usuario registrado correctamente");
+
         // Enviar los datos a una API o manejarlos según necesites
     };
 

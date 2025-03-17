@@ -4,63 +4,45 @@ import "./Inicio.css";
 function Inicio() {
   return (
     <div className="container">
+      
+      {/* Header con video de fondo y triángulo inclinado */}
+      <header className="header">
+        <div className="video-container">
+          <video autoPlay muted loop playsInline id="background-video">
+            <source src="/imgs/video4.mp4" type="video/mp4"/>
+            Tu navegador no soporta videos en HTML5.
+          </video>
+          <div className="video-overlay"></div>
+        </div>
+        <div className="header-content">
+          <h1>Novedades y Noticias</h1>
+          <p>Consulta las novedades y noticias de la página!</p>
+        </div>
+        <div className="triangle"></div>
+      </header>
 
-      {/* Bloque Titulo Pagina */}
-      <section id="services" className="services">
-        <h2>Novedades y Noticias</h2>
-        <p>Consulta las novedades y las noticias de la página!</p>
-      </section>
-
-      {/* Bloque Total Apartados */}
+      {/* Contenedor de noticias */}
       <div className="container_ini">
 
-        {/* Bloque Fila Apartados */}
+        {/* 🔺 Triángulo en la esquina inferior derecha */}
+        
+
         <div className="apartados">
 
-          {/* Cada Noticia */}
+          {/* NOTICIA 1 */}
           <div className="news-card">
-
-            {/* Imagen + Overlay */}
             <div className="news-image-container">
-
-              {/* Imagen */}
-              <img
-                src="/imgs/IMGS_PAG/comida_saludable.jpg"
-                alt="Noticia"
-                className="news-image"
-              />
-
-              {/* Overlay */}
+              <img src="/imgs/IMGS_PAG/comida_saludable.jpg" alt="Noticia" className="news-image" />
               <div className="news-overlay"></div>
             </div>
-
-            {/* Contenido del Bloque*/}
             <div className="news-content">
-
-                {/* Header noticia */}
               <div className="news-header">
-
-                {/* Imagen */}
-                <img
-                  src="/imgs/IMGS_PAG/dietita.png"
-                  alt="Logo"
-                  className="news-logo"
-                />
-
-                {/* Tipo Noticia */}
-                <span className="news-source">Comida Saludable</span> ·{" "}
-
-                {/* Publicación */}
-                <span className="news-time">20h</span>
+                <img src="/imgs/IMGS_PAG/dietita.png" alt="Logo" className="news-logo" />
+                <span className="news-source">Comida Saludable</span> · <span className="news-time">20h</span>
               </div>
-
-              {/* Texto de la noticia */}
               <p className="news-text">
-                Descubre alimentos saludables para una rica merienda llena de
-                proteínas
+                Descubre alimentos saludables para una rica merienda llena de proteínas.
               </p>
-
-              {/* Iconos de interacción */}
               <div className="news-actions">
                 <button className="news-like">👍 11</button>
                 <button className="news-comment">💬</button>
@@ -68,52 +50,20 @@ function Inicio() {
             </div>
           </div>
 
-
-
-          {/* Cada Noticia */}
+          {/* NOTICIA 2 */}
           <div className="news-card">
-            
-            {/* Imagen + Overlay */}
             <div className="news-image-container">
-
-              {/* Imagen */}
-              <img
-                src="/imgs/IMGS_PAG/mujer_ejer.jpg"
-                alt="Noticia"
-                className="news-image"
-              />
-
-              {/* Overlay */}
+              <img src="/imgs/IMGS_PAG/mujer_ejer.jpg" alt="Noticia" className="news-image" />
               <div className="news-overlay"></div>
             </div>
-
-            {/* Contenido del Bloque */}
             <div className="news-content">
-
-                {/* Header noticia */}
               <div className="news-header">
-
-                {/* Imagen */}
-                <img
-                  src="/imgs/IMGS_PAG/salud.png"
-                  alt="Logo"
-                  className="news-logo"
-                />
-
-                {/* Tipo Noticia */}
-                <span className="news-source">Salud</span> ·{" "}
-
-                {/* Publicación */}
-                <span className="news-time">2h</span>
+                <img src="/imgs/IMGS_PAG/salud.png" alt="Logo" className="news-logo" />
+                <span className="news-source">Salud</span> · <span className="news-time">2h</span>
               </div>
-
-              {/* Texto de la noticia */}
               <p className="news-text">
-                Prepara estos ejercicios para lucir un buen abdomen sin salir de
-                casa
+                Prepara estos ejercicios para lucir un buen abdomen sin salir de casa.
               </p>
-
-              {/* Iconos de interacción */}
               <div className="news-actions">
                 <button className="news-like">👍 7</button>
                 <button className="news-comment">💬</button>
@@ -121,49 +71,20 @@ function Inicio() {
             </div>
           </div>
 
-          {/* Cada Noticia */}
+          {/* NOTICIA 3 */}
           <div className="news-card">
-            
-            {/* Imagen + Overlay */}
             <div className="news-image-container">
-
-              {/* Imagen */}
-              <img
-                src="/imgs/IMGS_PAG/jiujitsu.jpg"
-                alt="Noticia"
-                className="news-image"
-              />
-
-              {/* Overlay */}
+              <img src="/imgs/IMGS_PAG/jiujitsu.jpg" alt="Noticia" className="news-image" />
               <div className="news-overlay"></div>
             </div>
-
-            {/* Contenido del Bloque */}
             <div className="news-content">
-
-                {/* Header noticia */}
               <div className="news-header">
-
-                {/* Imagen */}
-                <img
-                  src="/imgs/IMGS_PAG/deporte.png"
-                  alt="Logo"
-                  className="news-logo"
-                />
-
-                {/* Tipo Noticia */}
-                <span className="news-source">Deportes</span> ·{" "}
-
-                {/* Publicación */}
-                <span className="news-time">2 días</span>
+                <img src="/imgs/IMGS_PAG/deporte.png" alt="Logo" className="news-logo" />
+                <span className="news-source">Deportes</span> · <span className="news-time">2 días</span>
               </div>
-
-              {/* Texto de la noticia */}
               <p className="news-text">
-                Las mejores llaves de Jiujitsu para prepararse a un combate
+                Las mejores llaves de Jiujitsu para prepararse a un combate.
               </p>
-
-              {/* Iconos de interacción */}
               <div className="news-actions">
                 <button className="news-like">👍 1</button>
                 <button className="news-comment">💬</button>
@@ -173,6 +94,7 @@ function Inicio() {
 
         </div>
       </div>
+
     </div>
   );
 }

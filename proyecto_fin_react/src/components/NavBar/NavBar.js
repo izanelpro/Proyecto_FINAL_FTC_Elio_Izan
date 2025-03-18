@@ -10,7 +10,7 @@ function NavBar() {
       {/* Contenedor del Logo + Título */}
       <div className="navbar-left">
         <Link to="/">
-          <img src="/imgs/LOGO/CommunityLogo2.png" alt="Community Fit Logo" className="logo" />
+          <img src="/imgs/LOGO/logo_new.png" alt="Community Fit Logo" className="logo" />
         </Link>
         <h1 className="site-title">Community Fitness</h1>
       </div>

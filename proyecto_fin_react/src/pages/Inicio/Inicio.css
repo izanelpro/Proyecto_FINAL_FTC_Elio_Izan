@@ -10,7 +10,6 @@
   --hover-color: rgba(225, 48, 108, 0.8);
 }
 
-
 /* Bloque de noticias */
 .apartados {
   display: flex;
@@ -29,7 +28,7 @@
   font-family: Arial, sans-serif;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
-  position: relative; /* Para que el triángulo no se desplace fuera */
+  position: relative;
 }
 
 .news-card:hover {
@@ -131,4 +130,125 @@
 
 .news-like:hover, .news-comment:hover {
   color: var(--secondary-color);
+}
+
+/* Fondo con degradado */
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Contenedor principal de la cabecera */
+.header-content {
+  display: flex;
+ /* Separa el texto a la izquierda y la imagen a la derecha */
+  width: 90%;
+  max-width: 1200px;
+  text-align: left;
+}
+
+/* Estilo del título y el texto */
+.header-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--card-bg);
+  margin-bottom: 10px;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+/* Contenedor de texto a la izquierda */
+.text-section {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* Imagen grande a la derecha */
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-section img {
+  width: 200px;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-section {
+    margin-top: 20px;
+  }
+}
+
+/* Sección de Texto */
+.text-section {
+  flex: 1;
+  max-width: 300px;
+}
+
+.text-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.bold {
+  color: black;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-top: 10px;
+}
+.carousel-section {
+  width: 550px; /* Aumenta el tamaño */
+  height: auto;
+  margin-left: 200px; /* Mueve más a la izquierda */
+  margin-top: 50px; /* Súbelo un poco más */
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.slick-dots {
+  bottom: -20px; /* Sube o baja los puntos */
+  left: 50%; /* Centra los puntos */
+  transform: translateX(-50%);
+}
+
+.slick-dots li button:before {
+  font-size: 12px;  /* Ajusta el tamaño */
+  color: white !important; /* Color de los dots */
+  opacity: 0.5 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: red !important; /* Color del dot activo */
+  opacity: 1 !important;
 }

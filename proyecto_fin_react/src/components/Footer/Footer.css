@@ -1,15 +1,12 @@
-/* Pie de página */
-footer {
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
-  color: white;
-  text-align: center;
 
+
+main {
+  flex: 1; /* Expande el contenido para empujar el footer hacia abajo */
 }
 
-/* Estilos adicionales para el pie de página */
-footer p {
-  font-size: 0.9rem;
-  margin: 0;
+footer {
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  color: rgb(0, 0, 0);
+  text-align: center;
 }

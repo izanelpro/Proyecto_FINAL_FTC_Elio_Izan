@@ -1,4 +1,14 @@
-/* Fondo de video */
+:root {
+    --primary-color: #007BFF; /* Azul eléctrico */
+    --secondary-color: #E1306C; /* Rosa vibrante */
+    --background-light: #FFFFFF; /* Fondo claro */
+    --background-dark: #121212; /* Fondo oscuro */
+    --card-bg: #F0F2F5; /* Fondo de tarjetas */
+    --text-color: #333333; /* Texto principal */
+    --icon-color: #666666; /* Iconos */
+    --hover-color: rgba(225, 48, 108, 0.8);
+  }
+  /* Fondo de video */
 .video-container {
     position: fixed;
     top: 0;
@@ -30,6 +40,32 @@
     background: rgba(0, 0, 0, 0.5); /* Oscurece el video */
     backdrop-filter: blur(5px); /* Efecto de desenfoque */
 }
+
+.triangle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 200vw solid transparent; /* Abarca todo el ancho */
+    border-bottom: 550px solid #eeeeee; /* Aumentamos la altura */
+  }
+  
+  /* Asegurar que el contenedor principal tenga position relative */
+  .container {
+    position: relative;
+  }
+  
+  /* Contenedor principal */
+  .container_ini {
+    margin-top: 50%;
+    margin: 4%;
+    background-color: var(--background-light);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
 
 /* Ajustes en el body */
 body {

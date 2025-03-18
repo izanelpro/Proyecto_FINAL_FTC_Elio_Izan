@@ -10,31 +10,6 @@
   --hover-color: rgba(225, 48, 108, 0.8);
 }
 
-.triangle {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-left: 200vw solid transparent; /* Abarca todo el ancho */
-  border-bottom: 550px solid #eeeeee; /* Aumentamos la altura */
-}
-
-/* Asegurar que el contenedor principal tenga position relative */
-.container {
-  position: relative;
-}
-
-/* Contenedor principal */
-.container_ini {
-  margin-top: 50%;
-  margin: 4%;
-  background-color: var(--background-light);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  z-index: 100;
-}
 
 /* Bloque de noticias */
 .apartados {

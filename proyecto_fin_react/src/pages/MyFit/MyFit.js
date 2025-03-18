@@ -4,10 +4,23 @@ import './MyFit.css';  // Asegúrate de tener el archivo CSS
 function MyFit() {
     return (
         <div className="container">
-            <section id="services" className="services">
-                <h2>MyFit</h2>
-                <p>Consulta tu IMC y descubre información saludable</p>
-            </section>
+          
+      {/* Header con video de fondo y triángulo inclinado */}
+      <header className="header">
+        <div className="video-container">
+          <video autoPlay muted loop playsInline id="background-video">
+            <source src="/imgs/video4.mp4" type="video/mp4"/>
+            Tu navegador no soporta videos en HTML5.
+          </video>
+          <div className="video-overlay"></div>
+        </div>
+        <div className="header-content">
+        <h2>MyFit</h2>
+        <p>Consulta tu IMC y descubre información saludable</p>
+        </div>
+        <div className="triangle"></div>
+      </header>
+        
 
             {/* Cada Bloque */}
         <div className="myFit-card">

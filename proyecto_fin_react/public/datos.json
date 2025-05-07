@@ -1,0 +1,70 @@
+{
+    "tipoNoticias":[
+        { "id": 1, "tipo": "Comida Saludable" },
+        { "id": 2, "tipo": "Salud" },
+        { "id": 3, "tipo": "Deportes" }
+    ],
+
+    "noticias":[
+        {
+            "id": 1,
+            "imagen": "/imgs/IMGS_PAG/comida_saludable.jpg",
+            "logo": "/imgs/IMGS_PAG/dietita.png",
+            "tipo": "Comida Saludable",
+            "fecha": "20h",
+            "titulo": "Descubre alimentos saludables para una rica merienda llena de proteínas.",
+            "likes": 11,
+            "comentarios": 1
+        },
+        {
+            "id": 2,
+            "imagen": "/imgs/IMGS_PAG/mujer_ejer.jpg",
+            "logo": "/imgs/IMGS_PAG/salud.png",
+            "tipo": "Salud",
+            "fecha": "2h",
+            "titulo": "Prepara estos ejercicios para lucir un buen abdomen sin salir de casa.",
+            "likes": 7,
+            "comentarios": 3
+        },
+        {
+            "id": 3,
+            "imagen": "/imgs/IMGS_PAG/jiujitsu.jpg",
+            "logo": "/imgs/IMGS_PAG/deporte.png",
+            "tipo": "Deportes",
+            "fecha": "2 días",
+            "titulo": "Las mejores llaves de Jiujitsu para prepararse a un combate.",
+            "likes": 1,
+            "comentarios": 1
+        },
+        {
+            "id": 4,
+            "imagen": "/imgs/IMGS_PAG/nadal.jpg",
+            "logo": "/imgs/IMGS_PAG/deporte.png",
+            "tipo": "Deportes",
+            "fecha": "1 día",
+            "titulo": "Nadal se despide del tenis en Madrid.",
+            "likes": 30,
+            "comentarios": 12
+        },
+        {
+            "id": 5,
+            "imagen": "/imgs/IMGS_PAG/forma.jpg",
+            "logo": "/imgs/IMGS_PAG/salud.png",
+            "tipo": "Salud",
+            "fecha": "1h",
+            "titulo": "Contrata un entrenador profesional para perfeccionar tus ejercicios.",
+            "likes": 2,
+            "comentarios": 1
+        },
+        {
+            "id": 6,
+            "imagen": "/imgs/IMGS_PAG/barcelona.jpg",
+            "logo": "/imgs/IMGS_PAG/deporte.png",
+            "tipo": "Deportes",
+            "fecha": "4h",
+            "titulo": "El FCB ya tiene fichaje para Junio.",
+            "likes": 12,
+            "comentarios": 23
+        }
+    ]
+}

@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import "./Inicio.css";
 
 function Inicio() {
+  const [noticias, setNoticias] = useState([]);
+  const [tipoNoticias, setTipoNoticias] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/noticias")
+      .then(response => response.json())
+      .then(data => setNoticias(data));
+    fetch("http://localhost:3001/tipoNoticias")
+      .then(response => response.json())
+      .then(data => setTipoNoticias(data));
+
+  }, []);
+
+
+    
+
+
   const settings = {
     dots: true,
     infinite: true,
@@ -14,6 +31,18 @@ function Inicio() {
     autoplay: true,
     autoplaySpeed: 3000,
   };
+
+  function filtrarNoticias(tipo) {
+    if (tipo === "Todas") {
+      fetch("http://localhost:3001/noticias")
+        .then(response => response.json())
+        .then(data => setNoticias(data));
+    } else {
+      fetch(`http://localhost:3001/noticias?tipo=${tipo}`)
+        .then(response => response.json())
+        .then(data => setNoticias(data));
+    }
+  }
 
   return (
     <div className="container">
@@ -54,67 +83,42 @@ function Inicio() {
 
       {/* 🔺 Triángulo decorativo */}
       <div className="triangle"></div>
+      <div className="cuadrado"></div>
+      
+      <div className="busca-apartados-container">
+        {/* Select para filtrar noticias */}
+        <div className="busca">
+          <select className="select" name="tipoNoticia" id="tipoNoticia" onChange={(e) => filtrarNoticias(e.target.value)}>
+            <option value="Todas">Todas</option>
+            {tipoNoticias.map((tipoNoticia, index) => (
+              <option key={index} value={tipoNoticia.tipo}>{tipoNoticia.tipo}</option>
+            ))}
+          </select>
+        </div>
 
-      {/* Contenedor de noticias */}
-      <div className="container_ini">
-        <div className="apartados">
-          {/* NOTICIA 1 */}
-          <div className="news-card">
-            <div className="news-image-container">
-              <img src="/imgs/IMGS_PAG/comida_saludable.jpg" alt="Noticia" className="news-image" />
-              <div className="news-overlay"></div>
-            </div>
-            <div className="news-content">
-              <div className="news-header">
-                <img src="/imgs/IMGS_PAG/dietita.png" alt="Logo" className="news-logo" />
-                <span className="news-source">Comida Saludable</span> · <span className="news-time">20h</span>
+        {/* Contenedor de noticias */}
+        <div className="container_ini">
+          <div className="apartados">
+            {noticias.map(noticia => (
+              <div className="news-card" key={noticia.id}>
+                <div className="news-image-container">
+                  <img src={noticia.imagen} alt={noticia.titulo} className="news-image" />
+                  <div className="news-overlay"></div>
+                </div>
+                <div className="news-content">
+                  <div className="news-header">
+                    <img src={noticia.logo} alt="Logo" className="news-logo" />
+                    <span className="news-source">{noticia.tipo}</span> · <span className="news-time">{noticia.fecha}</span>
+                  </div>
+                  <p className="news-text">{noticia.titulo}</p>
+                  <div className="news-actions">
+                    <button className="news-like">👍 {noticia.likes}</button>
+                    <button className="news-comment">💬 {noticia.comentarios}</button>
+                  </div>
+                </div>
               </div>
-              <p className="news-text">Descubre alimentos saludables para una rica merienda llena de proteínas.</p>
-              <div className="news-actions">
-                <button className="news-like">👍 11</button>
-                <button className="news-comment">💬</button>
-              </div>
-            </div>
+            ))}
           </div>
-
-          {/* NOTICIA 2 */}
-          <div className="news-card">
-            <div className="news-image-container">
-              <img src="/imgs/IMGS_PAG/mujer_ejer.jpg" alt="Noticia" className="news-image" />
-              <div className="news-overlay"></div>
-            </div>
-            <div className="news-content">
-              <div className="news-header">
-                <img src="/imgs/IMGS_PAG/salud.png" alt="Logo" className="news-logo" />
-                <span className="news-source">Salud</span> · <span className="news-time">2h</span>
-              </div>
-              <p className="news-text">Prepara estos ejercicios para lucir un buen abdomen sin salir de casa.</p>
-              <div className="news-actions">
-                <button className="news-like">👍 7</button>
-                <button className="news-comment">💬</button>
-              </div>
-            </div>
-          </div>
-
-          {/* NOTICIA 3 */}
-          <div className="news-card">
-            <div className="news-image-container">
-              <img src="/imgs/IMGS_PAG/jiujitsu.jpg" alt="Noticia" className="news-image" />
-              <div className="news-overlay"></div>
-            </div>
-            <div className="news-content">
-              <div className="news-header">
-                <img src="/imgs/IMGS_PAG/deporte.png" alt="Logo" className="news-logo" />
-                <span className="news-source">Deportes</span> · <span className="news-time">2 días</span>
-              </div>
-              <p className="news-text">Las mejores llaves de Jiujitsu para prepararse a un combate.</p>
-              <div className="news-actions">
-                <button className="news-like">👍 1</button>
-                <button className="news-comment">💬</button>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>

@@ -1,10 +1,11 @@
 
 
 main {
-  flex: 1; /* Expande el contenido para empujar el footer hacia abajo */
+  flex: 8; /* Expande el contenido para empujar el footer hacia abajo */
 }
 
 footer {
+  margin-top: 500px;
   padding: 20px;
   backdrop-filter: blur(10px);
   color: rgb(0, 0, 0);

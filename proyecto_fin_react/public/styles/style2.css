@@ -43,6 +43,7 @@
 
 .triangle {
     z-index: -1;
+    margin: 0;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -63,8 +64,10 @@
   /* Contenedor principal */
   .container_ini {
     flex: 5; /* Empuja el footer hacia abajo */
+    width: max-content;
     margin-top: 50%;
     margin: 4%;
+    margin-right: 100px;
     background-color: var(--background-light);
     padding: 20px;
     border-radius: 10px;
